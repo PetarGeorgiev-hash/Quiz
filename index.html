@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./main.js"></script>
+  </head>
+  <body>
+    <div id="layout">
+      <form id="triviaOptions">
+        <label for="numberOfQuestions">Number of Questions</label>
+        <input
+          type="number"
+          name="numberOfQuestions"
+          id="numberOfQuestions"
+          min="1"
+          max="20"
+          value="10"
+        />
+        <label>Category</label>
+        <select name="category" id="category">
+          <option value="">Any</option>
+          <option value="21">Sport</option>
+          <option value="12">Music</option>
+          <option value="27">Animals</option>
+          <option value="28">Vehicles</option>
+        </select>
+        <label>Difficulty</label>
+        <select name="difficulty" id="difficulty">
+          <option value="">Any</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <label>Answers Types</label>
+        <select name="type" id="type">
+          <option value="">Any</option>
+          <option value="multiple">Multiple Choises</option>
+          <option value="boolean">True / False</option>
+        </select>
+        <button id="generateQuiz" type="submit">Generate Quiz</button>
+      </form>
+    </div>
+  </body>
+</html>

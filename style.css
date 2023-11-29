@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+}
+#layout {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+form {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0 auto;
+  & input {
+    height: 2.5rem;
+  }
+  & select {
+    height: 3.5rem;
+  }
+  & label {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  & button {
+    height: 4rem;
+    background-color: greenyellow;
+    cursor: pointer;
+  }
+}
+ul {
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+li {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  border: 3px solid black;
+  padding: 2%;
+  align-items: center;
+  gap: 1rem;
+}
+.answerHolder {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.answerHolder button {
+  border: none;
+  background-color: rgba(0, 0, 255, 0.352);
+  padding: 10px;
+  width: 6rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.answerHolder button:hover {
+  background-color: rgba(52, 52, 146, 0.352);
+}
+
+.disappear {
+  transition: all 2s;
+  transform: translateX(-200%);
+  animation: dissapear;
+  animation-duration: 1s;
+}
+#scoreBtn {
+  height: 5rem;
+  text-align: center;
+  width: 8rem;
+  display: flex;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 6px;
+  background-color: yellow;
+  cursor: pointer;
+}
+@keyframes dissapear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
