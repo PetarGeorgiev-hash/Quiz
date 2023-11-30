@@ -11,6 +11,8 @@ npm install
 ```
 
 ## Usage
+Start a [server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+
 Click on generate quiz or add a custom question.
 
 By finishing the quiz a View Score button will appear. Clicking it will download the file which contains the score.
