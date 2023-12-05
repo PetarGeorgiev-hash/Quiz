@@ -1,3 +1,4 @@
+"use strict";
 var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
         if (ar || !(i in from)) {
@@ -146,8 +147,10 @@ var quiz = {
     renderCatFact: function (fact) {
         var _a;
         var p = document.createElement("p");
-        p.innerHTML = fact;
-        (_a = this.wrapper) === null || _a === void 0 ? void 0 : _a.appendChild(p);
+        if (p) {
+            p.innerHTML = fact;
+            (_a = this.wrapper) === null || _a === void 0 ? void 0 : _a.appendChild(p);
+        }
     },
     getStoredFormData: function () {
         return JSON.parse(localStorage.getItem("form") || "{}");

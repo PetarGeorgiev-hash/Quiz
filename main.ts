@@ -167,9 +167,11 @@ const quiz = {
       });
   },
   renderCatFact(fact: string): void {
-    const p = document.createElement("p");
-    p.innerHTML = fact;
-    this.wrapper?.appendChild(p);
+    const p = document.createElement("p") as HTMLParagraphElement | null;
+    if (p) {
+      p.innerHTML = fact;
+      this.wrapper?.appendChild(p);
+    }
   },
   getStoredFormData(): object {
     return JSON.parse(localStorage.getItem("form") || "{}");
